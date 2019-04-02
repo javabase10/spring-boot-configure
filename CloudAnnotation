@@ -1,0 +1,5 @@
+Config server:
+
+@SpringBootApplication
+@EnableConfigServer
+public class ConfigServerApplication { }
