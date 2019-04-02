@@ -6,6 +6,9 @@ Config server:
 @EnableConfigServer
 public class ConfigServerApplication { }
 
+Config client:
+
+
 Eureka Server:
 
 @SpringBootApplication
@@ -17,3 +20,18 @@ Eureka client :
 @SpringBootApplication
 @EnableDiscoveryClient
 public class EurekaClientApplication { }
+
+
+Hystrix 
+
+@SpringBootApplication
+@EnableCircuitBreaker
+@EnableDiscoveryClient
+@EnableHystrixDashboard
+@EnableHystrix
+public class HystrixNetflixApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HystrixNetflixApplication.class, args);
+	}
+}
