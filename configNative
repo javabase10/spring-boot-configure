@@ -1,3 +1,5 @@
+Config Server: yml
+
 spring:
   profiles:
     include: native,default
@@ -12,3 +14,15 @@ spring:
           enabled: true
 server:
   port: 8888
+
+
+Config Client : yml
+
+spring:
+  application:
+    name: demo
+  profiles:
+    active: native
+  cloud:
+    config:
+      uri: http://localhost:8888
