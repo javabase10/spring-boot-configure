@@ -22,16 +22,18 @@ Eureka client :
 public class EurekaClientApplication { }
 
 
-Hystrix 
+Hystrix :
 
 @SpringBootApplication
 @EnableCircuitBreaker
 @EnableDiscoveryClient
 @EnableHystrixDashboard
 @EnableHystrix
-public class HystrixNetflixApplication {
+public class HystrixNetflixApplication { }
 
-	public static void main(String[] args) {
-		SpringApplication.run(HystrixNetflixApplication.class, args);
-	}
-}
+Zuul :
+
+@SpringBootApplication
+@EnableZuulProxy
+@EnableDiscoveryClient
+public class SpringBootZuulApplication { }
