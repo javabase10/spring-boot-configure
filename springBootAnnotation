@@ -23,4 +23,12 @@ public class DemoController {
   
   ------------------------------------------------------------------------------------------------------
   
+  @Autowired
+  private RestTemplate restTemplate;
   
+  @Bean
+  public RestTemplate getTemplate(){
+	return new RestTemplate();
+  }
+
+------------------------------------------------------------------------------------------------------
