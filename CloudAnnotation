@@ -1,5 +1,19 @@
+
+
 Config server:
 
 @SpringBootApplication
 @EnableConfigServer
 public class ConfigServerApplication { }
+
+Eureka Server:
+
+@SpringBootApplication
+@EnableEurekaServer
+public class EurekaServerApplication { }
+
+Eureka client :
+
+@SpringBootApplication
+@EnableDiscoveryClient
+public class EurekaClientApplication { }
