@@ -1,0 +1,26 @@
+
+@Component
+@ConfigurationProperties(prefix="suite.prop")
+public class ConfigProps {
+	
+	private String name;
+	private String password;
+  private String pass;
+  
+  //getter and setter
+}
+
+@RestController
+public class DemoController {
+	
+	@Autowired
+	ConfigProps configProps;
+	
+	@RequestMapping("/test")
+	public String test(){
+		return "********Team Name***********"+configProps.getName()+":password is :"+configProps.getPass();
+	}
+  
+  ------------------------------------------------------------------------------------------------------
+  
+  
